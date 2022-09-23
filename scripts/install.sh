@@ -24,6 +24,7 @@ install curl
 install exfat-utils
 install file
 install git
+install gh
 install htop
 install jq
 install yq
