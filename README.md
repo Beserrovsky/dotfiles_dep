@@ -1,6 +1,6 @@
-# Dotfiles for Ubuntu 21.10
+# Dotfiles for Ubuntu 22.04 LTS
 
-My preferred starting configuration. Currently using [Ubuntu 21.10 Impish Indri](https://ubuntu.com/download/desktop) + [Pop_OS! Shell](https://github.com/pop-os/shell) for tiling.
+My preferred starting configuration. Currently using [Ubuntu 22.04 Focal Fossa](https://ubuntu.com/download/desktopp) + [Pop_OS! Shell](https://github.com/pop-os/shell) for tiling.
 
 The installation script (`scripts/install.sh`) will install a suggested serving of programs and applications using scripts in the `scripts/programs/` directory. Please verify that you want these before running the script.
 
@@ -13,10 +13,10 @@ After installing your fresh OS, [create any SSH keys](https://docs.github.com/ar
 If not generating new keys, place the ones you need in `.ssh/`. Remember to run `ssh-add` as well as `chmod 600 <key_name>`. Then clone this repository:
 
 ```sh
-git clone git@github.com:victoriadrake/dotfiles.git
+git clone git@github.com:beserrovsky/dotfiles.git
 
 # Or use HTTPS
-git clone https://github.com/victoriadrake/dotfiles.git
+git clone https://github.com/beserrovsky/dotfiles.git
 ```
 
 You may optionally like to pass the `--depth` argument to clone only a few of the [most recent commits](https://github.com/victoriadrake/dotfiles/commits/master).

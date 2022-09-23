@@ -30,8 +30,10 @@ install yq
 install nmap
 install openvpn
 install tree
+install code
 install vim
 install wget
+install neofetch
 
 # Image processing
 install gimp
