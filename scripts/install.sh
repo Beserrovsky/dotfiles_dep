@@ -34,6 +34,10 @@ install vim
 install wget
 install neofetch
 
+sudo add-apt-repository universe
+install gnome-tweaks
+install gnome-shell-extension-manager
+
 # Image processing
 install gimp
 install jpegoptim
