@@ -1,6 +1,6 @@
 # Dotfiles for Ubuntu 22.04 LTS
 
-My preferred starting configuration. Currently using [Ubuntu 22.04 Focal Fossa](https://ubuntu.com/download/desktopp) + [Pop_OS! Shell](https://github.com/pop-os/shell) for tiling.
+My preferred starting configuration. Currently using [Ubuntu 22.04 Jammy Jellyfish](https://releases.ubuntu.com/22.04/) + [Pop_OS! Shell](https://github.com/pop-os/shell) for tiling.
 
 The installation script (`scripts/install.sh`) will install a suggested serving of programs and applications using scripts in the `scripts/programs/` directory. Please verify that you want these before running the script.
 
@@ -14,9 +14,6 @@ If not generating new keys, place the ones you need in `.ssh/`. Remember to run 
 
 ```sh
 git clone git@github.com:beserrovsky/dotfiles.git
-
-# Or use HTTPS
-git clone https://github.com/beserrovsky/dotfiles.git
 ```
 
 You may optionally like to pass the `--depth` argument to clone only a few of the [most recent commits](https://github.com/victoriadrake/dotfiles/commits/master).
@@ -29,20 +26,6 @@ cd dotfiles/scripts/
 ```
 
 To install the Pop_OS! Shell for window tiling, see [Installation in their repo.](https://github.com/pop-os/shell#installation)
-
-## Random Helpful Stuff (TM)
-
-### Clone all your remote repositories
-
-Given a list of repository URLs, `gh-repos.txt`, run:
-
-```sh
-xargs -n1 git clone < gh-repos.txt
-```
-
-Use the `firewood` Bash alias (see `.bashrc`) to collect remote branches.
-
-See [How to write Bash one-liners for cloning and managing GitHub and GitLab repositories](https://victoria.dev/blog/how-to-write-bash-one-liners-for-cloning-and-managing-github-and-gitlab-repositories/) for more.
 
 ### Terminal theme
 

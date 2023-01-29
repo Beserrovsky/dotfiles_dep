@@ -3,6 +3,8 @@
 # Copy dotfiles
 ./copy.sh
 
+cd /tmp
+
 # Update Ubuntu and get standard repository programs
 sudo apt update && sudo apt full-upgrade -y
 
@@ -48,5 +50,6 @@ install optipng
 for f in programs/*.sh; do bash "$f" -H; done
 
 # Get all upgrades
+sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y

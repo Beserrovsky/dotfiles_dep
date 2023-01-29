@@ -166,4 +166,5 @@ export PATH="$HOME/gems/bin:$PATH"
 # For Go
 export PATH=$PATH:/usr/local/go/bin
 
+# Runs neofetch
 neofetch
