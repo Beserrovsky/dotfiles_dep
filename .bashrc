@@ -16,6 +16,8 @@ alias mkdir='mkdir -pv'
 alias mv='mv -v'
 alias wget='wget -c'
 alias tree="tree -aI 'test*|.git|node_modules|resources'"
+alias gogh="wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh"
+
 
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
@@ -45,51 +47,10 @@ function cd () {
     ls -ACF
 }
 
-# Golang install or upgrade
-function getgolang () {
-    if [ $# -eq 0 ]
-        then
-            firefox https://go.dev/doc/install
-            echo "Please provide the latest version!"
-            return 1
-    fi
-    sudo rm -rf /usr/local/go
-    wget -q -P tmp/ https://dl.google.com/go/go"$@".linux-amd64.tar.gz
-    sudo tar -C /usr/local -xzf tmp/go"$@".linux-amd64.tar.gz
-    rm -rf tmp/
-    go version
-}
-
-# GHCLI install or upgrade
-function getghcli () {
-    wget -q -P tmp/ https://github.com/cli/cli/releases/download/v"$@"/gh_"$@"_linux_amd64.deb
-    cd tmp/ && sudo dpkg -i gh_"$@"_linux_amd64.deb
-    cd .. && rm -rf tmp/
-    gh --version
-}
-
-# Hugo install or upgrade
-function gethugo () {
-    wget -q -P tmp/ https://github.com/gohugoio/hugo/releases/download/v"$@"/hugo_extended_"$@"_Linux-64bit.tar.gz
-    tar xf tmp/hugo_extended_"$@"_Linux-64bit.tar.gz -C tmp/
-    sudo mv -f tmp/hugo /usr/local/bin/
-    rm -rf tmp/
-    hugo version
-}
-
-# Hugo site from exampleSite in themes/
-function hugotheme () {
-    HUGO_THEME="$1" hugo "${@:2}" --themesDir ../.. -v
-}
-
 # Markdown link check in a folder, recursive
 function mlc () {
     find $1 -name \*.md -exec markdown-link-check -p {} \;
 }
-
-# Go
-export PATH=$PATH:/usr/local/bin:/usr/local/go/bin:~/.local/bin:$GOPATH/bin
-export GOPATH=~/go
 
 # Vim for life
 export EDITOR=/usr/bin/vim
@@ -158,13 +119,6 @@ export PS1="${pathC}\w ${gitC}\$(gitBranch) ${pointerC}\$${normalC} "
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-
-# For Go
-export PATH=$PATH:/usr/local/go/bin
 
 # Runs neofetch
 neofetch

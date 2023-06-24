@@ -23,13 +23,11 @@ function install {
 install awscli
 install chrome-gnome-shell
 install curl
-install exfat-utils
 install file
 install git
 install gh
 install htop
 install jq
-install yq
 install nmap
 install openvpn
 install tree
