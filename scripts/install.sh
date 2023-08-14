@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# TODO: ADD SOFTWARE
+# - Obsidian
+# - Tmux
+
 # Copy dotfiles
 ./copy.sh
 
