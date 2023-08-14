@@ -3,6 +3,7 @@
 # TODO: ADD SOFTWARE
 # - Obsidian
 # - Tmux
+# - Tor
 
 # Copy dotfiles
 ./copy.sh
