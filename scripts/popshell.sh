@@ -10,3 +10,8 @@ cd ./shell
 
 # THIS WILL SHUTDOWN YOUR COMPUTER!
 make local-install
+
+# Enable it in extensions
+sudo add-apt-repository universe
+sudo apt install gnome-shell-extension-prefs
+gnome-shell-extension-prefs
