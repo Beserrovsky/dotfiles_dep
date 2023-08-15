@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: ADD SOFTWARE
-# - Obsidian
+# - snap classic Obsidian
 # - Tmux
 # - Tor
 
